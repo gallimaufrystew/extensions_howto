@@ -1,0 +1,52 @@
+After some digging, I finally came up a howto. Without any redundancy, let's go.
+
+1   preparing the environment for compiling the code.
+
+I personally use Manjaro, this step is simply done by issuing one command: sudo pacman -S yarn.
+
+2   download the release code from github: https://github.com/birchill/10ten-ja-reader
+
+It's a tarball. unpack it to anywhere you want to put them.
+
+3   editing the source files.
+
+I just touched on 2 files located at 10ten-ja-reader-1.4.7/css/popup.css and 10ten-ja-reader-1.4.7/css/themes.css relatively.
+as to the former, I changed the lines started with "font-size" and ending with "px" suffixes. It looks like this:
+.w-kanji {
+  font-size: 21px;
+  margin-right: 0.7em;
+  color: var(--primary-highlight);
+}
+
+.w-kanji .w-unmatched,
+.w-kanji .w-separator {
+  opacity: 0.6;
+}
+
+.w-kana {
+  font-size: 21px;
+  margin-right: 0.3em;
+}
+as to the latter:
+
+  --primary-highlight: #DA70D6;
+
+.window.theme-lightblue .w-kanji {
+    color: #DA70D6;
+}
+
+.window.theme-lightblue .w-kana {
+    color: #1E90FF;
+}
+
+4   compiling the code
+
+Issuing the command: yarn package:chrome is enough. if everything goes well, you get a directory with a zip file in it located at 10ten-ja-reader-1.4.7/dist-chrome-package/ relatively.
+
+5  test it in the browser.
+
+For Chrome browser, just type in this: chrome://extensions/ and toggle on the developer mode.
+
+Unpacking the zip file we got to a directory and copy its path and paste it into the edit box which you can see by clicking the "Pack extension" button on the page just opened.
+
+After some busy CPU cycles to download the dictionaries which the 10ten-ja-reader automatically does, you should see the change.
