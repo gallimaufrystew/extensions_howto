@@ -1,0 +1,27 @@
+:root {
+    --background-color: #FFFAF0;
+}
+
+.headword {
+    --headword-current-furigana-text-color: #1E90FF;
+}
+
+ruby {
+    color: var(--headword-current-furigana-text-color);
+}
+
+.headword-kanji-link {
+    color: #DA70D6;
+}
+
+
+
+.inflection {
+    color: #7F00FF;
+}
+
+.gloss-content {
+    font-family: Nimbus Mono PS; 
+    font-size: 24px;
+}
+
