@@ -12,6 +12,7 @@ It's a tarball. unpack it to anywhere you want to put them.
 
 I just touched on 2 files located at 10ten-ja-reader-1.4.7/css/popup.css and 10ten-ja-reader-1.4.7/css/themes.css relatively.
 as to the former, I changed the lines started with "font-size" and ending with "px" suffixes. It looks like this:
+
 .w-kanji {
   font-size: 21px;
   margin-right: 0.7em;
